@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dineth Mendis - Graphic Designer</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+      background: linear-gradient(120deg, #232526, #414345);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00d9ff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    /* Smooth Animations */
+    * {
+      transition: all 0.4s ease-in-out;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0px 4px 10px rgba(0, 217, 255, 0.2);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00d9ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #1f4037, #99f2c8);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-title {
+      font-size: 4em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: #00d9ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0px 4px 20px rgba(0, 217, 255, 0.5);
+    }
+
+    .btn-primary:hover {
+      background: #ffffff;
+      color: #00d9ff;
+    }
+
+    /* Floating FX Elements */
+    .floating-circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(0, 217, 255, 0.3);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float 8s infinite ease-in-out alternate;
+      mix-blend-mode: screen;
+    }
+
+    .circle-1 {
+      top: 10%;
+      left: 20%;
+    }
+
+    .circle-2 {
+      top: 70%;
+      right: 20%;
+    }
+
+    .circle-3 {
+      bottom: 10%;
+      left: 50%;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        transform: translateY(-50px) scale(1.2);
+      }
+    }
+
+    /* Expertise Section */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 80px 20px;
+    }
+
+    .card {
+      background: linear-gradient(120deg, #434343, #000000);
+      border-radius: 20px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      color: #ffffff;
+      transform: scale(1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.1);
+      box-shadow: 0px 10px 30px rgba(0, 217, 255, 0.5);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(120deg, #232526, #414345);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      font-size: 0.9em;
+      text-align: center;
+      background: rgba(0, 217, 255, 0.1);
+      padding: 15px 25px;
+      color: #00d9ff;
+      font-weight: bold;
+      box-shadow: 0px 4px 20px rgba(0, 217, 255, 0.2);
+      transition: transform 0.4s, background 0.4s ease-in-out;
+      border-radius: 12px;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.1);
+      background: rgba(0, 217, 255, 0.3);
+      box-shadow: 0px 10px 40px rgba(0, 217, 255, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      padding: 20px 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="logo">Dineth Mendis</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1 class="hero-title">Elevate Your Brand’s Vision</h1>
+    <p class="hero-subtitle">Modern designs that captivate and inspire.</p>
+    <a href="#contact" class="btn-primary">Let's Collaborate</a>
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+  </header>
+
+  <!-- Expertise Section -->
+  <section id="expertise" class="card-container">
+    <div class="card">
+      <h3>Logo Design</h3>
+      <p>Crafting distinctive logos that define your brand identity.</p>
+    </div>
+    <div class="card">
+      <h3>Business Cards</h3>
+      <p>Professional cards that leave a memorable impression.</p>
+    </div>
+    <div class="card">
+      <h3>Social Media Graphics</h3>
+      <p>Engaging visuals to grow your online presence.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2 class="contact-title">Get in Touch</h2>
+    <div class="contact-links">
+      <div class="contact-item">📧 Email: <a href="mailto:dinethshakila@gmail.com">dinethshakila@gmail.com</a></div>
+      <div class="contact-item">🔗 Fiverr: <a href="https://www.fiverr.com/dinemendis?public_mode=true" target="_blank">Visit My Fiverr Profile</a></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Dineth Mendis. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
